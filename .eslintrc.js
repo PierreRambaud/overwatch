@@ -3,14 +3,22 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     browser: true,
-    node: true
+    node: true,
+    es6: true,
   },
-  extends: 'standard',
-  // required to lint *.vue files
+  extends: 'airbnb-base',
   plugins: [
-    'html'
+    'import',
+    'html',
   ],
-  // add your custom rules here
-  rules: {},
+  rules: {
+    'indent': ['error', 2, {'SwitchCase': 1}],
+    'import/no-unresolved': 0,
+    'function-paren-newline': ['off', 'never'],
+    'object-curly-spacing': ['error', 'never'],
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'import/extensions': ['off', 'never'],
+  },
   globals: {}
 }

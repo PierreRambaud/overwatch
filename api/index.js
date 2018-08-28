@@ -4,10 +4,10 @@ const express = require('express')
 const app = express()
 
 // Require API routes
-const users = require('./routes/users')
+const github = require('./routes/github')
 
 // Import API Routes
-app.use(users)
+app.use(github)
 
 // Export the server middleware
 module.exports = {
