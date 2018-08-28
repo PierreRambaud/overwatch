@@ -4,22 +4,22 @@
             GitHub Pull Requests
         </h1>
         <ul class="prs">
-            <li v-for="(pr, index) in prs" :key="index" class="github-pr">
-                <nuxt-link :to="{ name: 'id', params: { id: index }}">
-                    {{ user.name }}
-                </nuxt-link>
-            </li>
+            <repository-list :repositories="prs" />
         </ul>
     </section>
 </template>
 
 <script>
   import axios from '~/plugins/axios';
+  import RepositoryList from '~/components/github/repositories';
 
   export default {
+    componenets: {
+      RepositoryList,
+    },
     async asyncData() {
-      const {data} = await axios.get('/api/repositories');
-      return {users: data};
+      const {data} = await axios.get('/api/github/notifications');
+      return {prs: data};
     },
     head() {
       return {

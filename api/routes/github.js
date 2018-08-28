@@ -1,18 +1,11 @@
-import Github from 'github-api';
-const { Router } = require('express');
+/* const {Github} = require('github-api'); */
+const {Router} = require('express');
 
-const router = Router()
-
-// Mock Users
-const users = [
-  { name: 'Alexandre' },
-  { name: 'Pooya' },
-  { name: 'Sébastien' }
-]
+const router = Router();
 
 /* GET users listing. */
-router.get('/github/notifications', function (req, res, next) {
-  res.json(users)
-})
+router.get('/github/notifications', (req, res) => {
+  res.json({});
+});
 
-module.exports = router
+module.exports = router;
