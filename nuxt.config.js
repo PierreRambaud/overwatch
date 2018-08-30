@@ -14,17 +14,18 @@ module.exports = {
     ],
   },
   /*
-  ** Global CSS
-  */
-  css: ['~/assets/css/main.css'],
+   ** Global CSS
+   */
+  css: ['~/assets/scss/main.scss'],
   /*
-  ** Add axios globally
-  */
+   ** Add axios globally
+   */
   build: {
+    watch: ['api'],
     vendor: ['axios'],
     /*
-    ** Run ESLINT on save
-    */
+     ** Run ESLINT on save
+     */
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

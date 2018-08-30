@@ -1,44 +1,34 @@
 <template>
     <section class="container">
         <h1 class="title">
-            GitHub Pull Requests
+            GitHub Notifications Priorizer
         </h1>
-        <ul class="prs">
-            <repository-list :repositories="prs" />
-        </ul>
+
+        <notifications :notifications="notifications" />
     </section>
 </template>
 
 <script>
   import axios from '~/plugins/axios';
-  import RepositoryList from '~/components/github/repositories';
+  import Notifications from '~/components/github/notifications';
 
   export default {
-    componenets: {
-      RepositoryList,
-    },
-    async asyncData() {
-      const {data} = await axios.get('/api/github/notifications');
-      return {prs: data};
+    components: {
+      Notifications,
     },
     head() {
       return {
-        title: 'Repositories',
+        title: 'GitHub Notifications Priorizer',
       };
+    },
+    data() {
+      return {
+        notifications: {},
+      };
+    },
+    async asyncData() {
+      const {data} = await axios.get('/api/github/notifications');
+      return {notifications: data};
     },
   };
 </script>
-
-<style scoped>
-  .title {
-    margin: 30px 0;
-  }
-  .github-prs {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .user {
-    margin: 10px 0;
-  }
-</style>
