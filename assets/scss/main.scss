@@ -17,6 +17,10 @@ footer {
   border-top: 1px solid #ddd;
 }
 
+a {
+  text-decoration: none;
+}
+
 a, a:hover, a:focus, a:visited {
   color: #000;
 }
@@ -63,7 +67,7 @@ a, a:hover, a:focus, a:visited {
   .list-group-item {
     position: relative;
     display: block;
-    padding: 8px 10px 10px 35px;
+
     margin-bottom: -1px;
     border: 1px solid #e1e4e8;
     border-width: 1px 0 0;
@@ -77,12 +81,21 @@ a, a:hover, a:focus, a:visited {
       width: 16px;
       text-align: center;
       vertical-align: middle;
+      float: left;
+      margin-top: 1px;
+      margin-left: -24px;
     }
   }
-  .list-group-item-name .type-icon {
-    float: left;
-    margin-top: 1px;
-    margin-left: -24px;
+  .list-group-item-link {
+    display: block;
+    padding: 8px 10px 10px 35px;
+  }
+  .list-group-item-name {
+    font-size: 13px;
+  }
+  .list-group-item-time {
+    font-size: 12px;
+    float: right;
   }
 }
 

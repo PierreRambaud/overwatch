@@ -13,6 +13,7 @@
 <script>
   import Repository from '~/components/github/repository';
   import Notification from '~/components/github/notification';
+  import constant from '~/constant';
 
   export default {
     name: 'notifications',
@@ -30,6 +31,10 @@
       notifs() {
         const result = {};
         this.notifications.forEach((value) => {
+          if (value.subject.type !== constant.NOTIFICATION_TYPE.PR) {
+            return;
+          }
+
           const issue = Object.assign({}, value);
           const repoId = issue.repository.id;
           delete issue.repository;
@@ -43,6 +48,7 @@
 
           result[repoId].issues.push(issue);
         });
+
         return result;
       },
     },

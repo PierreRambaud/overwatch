@@ -20,9 +20,15 @@ module.exports = {
   /*
    ** Add axios globally
    */
+  plugins: [
+    '~/plugins/vue-timeago',
+  ],
   build: {
     watch: ['api'],
-    vendor: ['axios'],
+    vendor: [
+      'axios',
+      'vue-timeago',
+    ],
     /*
      ** Run ESLINT on save
      */
