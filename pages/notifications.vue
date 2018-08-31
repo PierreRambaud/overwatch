@@ -4,9 +4,7 @@
             Overwatch
         </h1>
 
-        <nuxt-link class="button" to="/notifications">
-            Notifications
-        </nuxt-link>
+        <notifications :notifications="notifications" />
     </section>
 </template>
 
@@ -20,7 +18,7 @@
     },
     head() {
       return {
-        title: 'Overwatch',
+        title: 'Overwatch Notifications',
       };
     },
     data() {
