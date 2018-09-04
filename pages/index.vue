@@ -1,16 +1,6 @@
 <template>
-    <section class="container">
-        <h1 class="title">
-            Overwatch
-        </h1>
-
-        <nuxt-link class="button" to="/notifications">
-            Notifications
-        </nuxt-link>
-
-        <nuxt-link class="button" to="/issues">
-            Issues
-        </nuxt-link>
+    <section class="container text-center">
+        <img src="https://www.mememaker.net/api/bucket?path=static/img/memes/full/2017/May/4/13/where-is-pull-request.jpg" />
     </section>
 </template>
 

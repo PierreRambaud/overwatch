@@ -1,16 +1,19 @@
 <template>
     <div>
+        <ow-menu />
         <nuxt/>
-        <my-footer/>
+        <ow-footer />
     </div>
 </template>
 
 <script>
-  import MyFooter from '~/components/footer';
+  import OwFooter from '~/components/footer';
+  import OwMenu from '~/components/menu';
 
   export default {
     components: {
-      MyFooter,
+      OwFooter,
+      OwMenu,
     },
   };
 </script>

@@ -1,9 +1,5 @@
 <template>
     <section class="container">
-        <h1 class="title">
-            Overwatch Issues
-        </h1>
-
         <b-pagination size="sm" :total-rows="total_count" v-model="page" align="center" />
 
         <issues :issues="issues" />
@@ -38,7 +34,6 @@
           '/api/github/issues',
           {
             params: {
-              q: 'org:PrestaShop+is:pr+is:open',
               page: val,
             },
           },
@@ -52,7 +47,6 @@
         '/api/github/issues',
         {
           params: {
-            q: 'org:PrestaShop+is:pr+is:open',
           },
         },
       );

@@ -1,9 +1,5 @@
 <template>
     <section class="container">
-        <h1 class="title">
-            Overwatch Notifications
-        </h1>
-
         <notifications :notifications="notifications" />
     </section>
 </template>

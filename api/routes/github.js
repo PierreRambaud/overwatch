@@ -48,7 +48,7 @@ router.get('/github/pull', async (req, res) => {
 
 router.get('/github/issues', async (req, res) => {
   const {data} = await octokit.search.issues({
-    q: req.query.q,
+    q: process.env.GITHUB_QUERY,
     sort: req.query.sort,
     order: req.query.order,
     per_page: req.query.per_page,

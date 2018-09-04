@@ -1,12 +1,21 @@
 # Overwatch
 
-> Nuxt.js project
+Let's watch which Pull Requests you missed.
+
+## Requirements
+
+You need to configure a Github Token with `Notifications` and `Public Repositories` rights.
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ npm install
+
+# Save .env from .env.dist
+$ cp .env.dist .env
+
+# Edit GITHUB_TOKEN and GITHUB_QUERY if needed
 
 # serve with hot reload at localhost:3000
 $ npm run dev
