@@ -7,6 +7,10 @@
         <nuxt-link class="button" to="/notifications">
             Notifications
         </nuxt-link>
+
+        <nuxt-link class="button" to="/issues">
+            Issues
+        </nuxt-link>
     </section>
 </template>
 

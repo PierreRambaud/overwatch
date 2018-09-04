@@ -17,11 +17,8 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-a {
-  text-decoration: none;
-}
-
 a, a:hover, a:focus, a:visited {
+  text-decoration: none;
   color: #000;
 }
 .container {
@@ -48,7 +45,7 @@ a, a:hover, a:focus, a:visited {
   margin: 0 0 60px;
 }
 
-.notifications {
+.notifications, .issues {
   h3 {
     font-size: 14px;
     line-height: 17px;
@@ -62,15 +59,15 @@ a, a:hover, a:focus, a:visited {
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
   }
-}
-.notifications {
+
   .list-group-item {
     position: relative;
     display: block;
-
+    padding: 0;
     margin-bottom: -1px;
     border: 1px solid #e1e4e8;
     border-width: 1px 0 0;
+
     &:hover {
       background-color: #f1f8ff;
     }

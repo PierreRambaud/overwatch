@@ -31,7 +31,7 @@
       notifs() {
         const result = {};
         this.notifications.forEach((value) => {
-          if (value.subject.type !== constant.NOTIFICATION_TYPE.PR) {
+          if (value.subject.type !== constant.ISSUE_TYPE.PR) {
             return;
           }
 

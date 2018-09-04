@@ -1,5 +1,5 @@
 export default {
-  NOTIFICATION_TYPE: {
+  ISSUE_TYPE: {
     PR: 'PullRequest',
     ISSUE: 'Issue',
   },

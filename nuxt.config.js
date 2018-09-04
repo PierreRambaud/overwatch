@@ -23,6 +23,9 @@ module.exports = {
   plugins: [
     '~/plugins/vue-timeago',
   ],
+  modules: [
+    'bootstrap-vue/nuxt',
+  ],
   build: {
     watch: ['api'],
     vendor: [
